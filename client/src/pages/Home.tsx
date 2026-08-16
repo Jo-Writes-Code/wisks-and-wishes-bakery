@@ -3,11 +3,9 @@
  * candid bakery imagery, cocoa controls, and Candle Pink used solely for key order moments.
  */
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Clock3, MapPin, Menu, Minus, Plus, ShoppingBag, X } from "lucide-react";
-import { toast } from "sonner";
+import { ArrowUpRight, Clock3, MapPin, Menu, MessageCircle, PhoneCall, X } from "lucide-react";
 
 type Product = {
-  id: number;
   name: string;
   note: string;
   price: number;
@@ -16,21 +14,18 @@ type Product = {
 
 const products: Product[] = [
   {
-    id: 1,
     name: "MIDNIGHT CHUNK",
     note: "dark chocolate + sea salt",
     price: 4,
     image: "/manus-storage/crumb-candle-cookies_d4713f1f.jpg",
   },
   {
-    id: 2,
     name: "SPRINKLE CAKE",
     note: "vanilla bean + strawberry jam",
     price: 38,
     image: "/manus-storage/crumb-candle-cake_a9d2c0a4.jpg",
   },
   {
-    id: 3,
     name: "CARDAMOM BUN",
     note: "orange sugar + pearl sugar",
     price: 5,
@@ -42,37 +37,26 @@ function money(value: number) {
   return `$${value.toFixed(2)}`;
 }
 
+const whatsappNumber = "15551234567";
+const whatsappLink = (message: string) =>
+  `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
 export default function Home() {
-  const [cart, setCart] = useState<Record<number, number>>({});
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 28);
+    const onScroll = () => {
+      const scrollPosition = window.scrollY;
+      setScrolled(scrollPosition > 28);
+      document.documentElement.style.setProperty("--hero-shift", `${Math.min(scrollPosition * 0.14, 128)}px`);
+      document.documentElement.style.setProperty("--hero-copy-shift", `${Math.min(scrollPosition * -0.07, 58)}px`);
+      document.documentElement.style.setProperty("--shelf-shift", `${Math.min(scrollPosition * 0.025, 38)}px`);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const itemCount = Object.values(cart).reduce((total, quantity) => total + quantity, 0);
-  const total = products.reduce((sum, product) => sum + product.price * (cart[product.id] ?? 0), 0);
-
-  function updateCart(productId: number, nextQuantity: number) {
-    setCart((current) => {
-      const next = { ...current };
-      if (nextQuantity <= 0) {
-        delete next[productId];
-      } else {
-        next[productId] = nextQuantity;
-      }
-      return next;
-    });
-  }
-
-  function addProduct(product: Product) {
-    updateCart(product.id, (cart[product.id] ?? 0) + 1);
-    toast.success(`${product.name.toLowerCase()} added to your basket`);
-  }
 
   function navigateTo(target: string) {
     setMenuOpen(false);
@@ -100,11 +84,10 @@ export default function Home() {
           ))}
         </nav>
 
-        <button className="cart-link" onClick={() => navigateTo("#pickup")} aria-label="View your order basket">
-          <ShoppingBag size={18} strokeWidth={2.1} />
-          <span className="cart-copy">BASKET</span>
-          <span className="cart-count">{itemCount}</span>
-        </button>
+        <a className="order-link" href={whatsappLink("Hi Crumb & Candle! I’d like to order some treats.")} target="_blank" rel="noreferrer">
+          <MessageCircle size={18} strokeWidth={2.1} />
+          <span>WHATSAPP TO ORDER</span>
+        </a>
 
         <button
           className="mobile-menu-toggle"
@@ -133,10 +116,10 @@ export default function Home() {
           <div className="hero-content">
             <p className="eyebrow eyebrow--light">NEIGHBORHOOD BAKESHOP · EST. 2026</p>
             <h1>SWEET<br />THINGS,<br />MADE DAILY.</h1>
-            <button className="round-cta" onClick={() => navigateTo("#buy")}>
-              <span>SEE WHAT’S<br />FRESH</span>
-              <ArrowUpRight size={24} strokeWidth={2.25} aria-hidden="true" />
-            </button>
+            <a className="round-cta" href={whatsappLink("Hi Crumb & Candle! I’d like to order some treats.")} target="_blank" rel="noreferrer">
+              <span>CALL /<br />WHATSAPP</span>
+              <PhoneCall size={24} strokeWidth={2.25} aria-hidden="true" />
+            </a>
           </div>
           <div className="hero-bottom-note">COUNTER OPEN · TUESDAY — SATURDAY · 8–4</div>
         </section>
@@ -148,13 +131,23 @@ export default function Home() {
             <div className="about-copy">
               <p>Crumb &amp; Candle is a tiny corner bakery for cookies with crisp edges, soft-centered buns, and cakes that show up well to the party.</p>
               <p>We mix slowly, bake early, and save the best bit for the walk home.</p>
-              <button className="text-cta" onClick={() => navigateTo("#buy")}>PICK YOUR TREATS <ArrowUpRight size={18} aria-hidden="true" /></button>
+              <a className="text-cta" href={whatsappLink("Hi Crumb & Candle! I’d like to hear what’s fresh today.")} target="_blank" rel="noreferrer">ASK WHAT’S FRESH <ArrowUpRight size={18} aria-hidden="true" /></a>
             </div>
           </div>
           <div className="about-rule" aria-hidden="true"><span /> <span /> <span /></div>
         </section>
 
         <section id="buy" className="shop-section section-pad">
+          <div className="diagonal-ticker diagonal-ticker--front" aria-hidden="true">
+            <div className="ticker-track">
+              {["BAKED DAILY", "CALL TO ORDER", "PICKUP TREATS", "BAKED DAILY", "CALL TO ORDER", "PICKUP TREATS", "BAKED DAILY", "CALL TO ORDER"].map((item, index) => <span key={index}>{item} <b>✦</b></span>)}
+            </div>
+          </div>
+          <div className="diagonal-ticker diagonal-ticker--back" aria-hidden="true">
+            <div className="ticker-track ticker-track--reverse">
+              {["WARM FROM THE OVEN", "SOMETHING SWEET", "WHATSAPP US", "WARM FROM THE OVEN", "SOMETHING SWEET", "WHATSAPP US", "WARM FROM THE OVEN"].map((item, index) => <span key={index}>{item} <b>✦</b></span>)}
+            </div>
+          </div>
           <div className="section-heading-row">
             <div>
               <p className="eyebrow">TODAY’S COUNTER</p>
@@ -165,9 +158,8 @@ export default function Home() {
 
           <div className="product-grid">
             {products.map((product, index) => {
-              const quantity = cart[product.id] ?? 0;
               return (
-                <article className={`product-card product-card--${index + 1}`} key={product.id}>
+                <article className={`product-card product-card--${index + 1}`} key={product.name}>
                   <div className="product-image-wrap">
                     <img src={product.image} alt={product.name.toLowerCase()} className="product-image" />
                     <span className="image-number">0{index + 1}</span>
@@ -179,17 +171,9 @@ export default function Home() {
                     </div>
                     <strong>{money(product.price)}</strong>
                   </div>
-                  {quantity === 0 ? (
-                    <button className="add-button" onClick={() => addProduct(product)}>
-                      <Plus size={17} strokeWidth={2.2} /> ADD TO BASKET
-                    </button>
-                  ) : (
-                    <div className="quantity-control" aria-label={`${product.name} quantity controls`}>
-                      <button onClick={() => updateCart(product.id, quantity - 1)} aria-label={`Remove one ${product.name}`}><Minus size={15} /></button>
-                      <span>{quantity}</span>
-                      <button onClick={() => updateCart(product.id, quantity + 1)} aria-label={`Add one ${product.name}`}><Plus size={15} /></button>
-                    </div>
-                  )}
+                  <a className="add-button" href={whatsappLink(`Hi Crumb & Candle! I’d like to order the ${product.name}. Is it available?`)} target="_blank" rel="noreferrer">
+                    ASK ABOUT THIS <ArrowUpRight size={17} strokeWidth={2.2} />
+                  </a>
                 </article>
               );
             })}
@@ -204,29 +188,19 @@ export default function Home() {
           </div>
           <div className="order-panel">
             <div className="order-panel-heading">
-              <span>YOUR BASKET</span>
-              <strong>{itemCount} {itemCount === 1 ? "ITEM" : "ITEMS"}</strong>
+              <span>CALL-FIRST ORDERS</span>
+              <strong>TUE–SAT</strong>
             </div>
-            <div className="order-lines">
-              {itemCount === 0 ? (
-                <p className="empty-basket">A very quiet basket. Pick something sweet above.</p>
-              ) : (
-                products.filter((product) => cart[product.id]).map((product) => (
-                  <div className="order-line" key={product.id}>
-                    <span>{cart[product.id]}× {product.name}</span>
-                    <span>{money(product.price * (cart[product.id] ?? 0))}</span>
-                  </div>
-                ))
-              )}
+            <div className="order-lines order-steps">
+              <p><span>01</span> Pick a treat from the counter.</p>
+              <p><span>02</span> Message us on WhatsApp.</p>
+              <p><span>03</span> We’ll confirm your pickup time.</p>
             </div>
-            <div className="order-total"><span>TOTAL</span><strong>{money(total)}</strong></div>
-            <button
-              className="checkout-button"
-              onClick={() => itemCount ? toast.success("Your demo order is ready for a real checkout connection.") : toast.message("Add a little something to your basket first.")}
-            >
-              PLACE DEMO ORDER <ArrowUpRight size={18} aria-hidden="true" />
-            </button>
-            <p className="demo-note">DEMO BASKET · NO PAYMENT IS TAKEN</p>
+            <a className="checkout-button" href={whatsappLink("Hi Crumb & Candle! I’d like to place an order for pickup.")} target="_blank" rel="noreferrer">
+              WHATSAPP US TO ORDER <MessageCircle size={18} aria-hidden="true" />
+            </a>
+            <a className="call-number" href="tel:+15551234567"><PhoneCall size={16} aria-hidden="true" /> OR CALL +1 (555) 123-4567</a>
+            <p className="demo-note">PLACEHOLDER NUMBER · REPLACE BEFORE LAUNCH</p>
           </div>
           <div className="pickup-details">
             <p><MapPin size={17} aria-hidden="true" /> 28 SUGAR LANE · EASTSIDE</p>
