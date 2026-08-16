@@ -77,3 +77,7 @@ The wordmark is set in compact editorial caps alongside a small **flame-shaped c
 The reference confirms that the strongest fidelity cues are a full-bleed overhead bake spread, huge low-left hero typography, a minimal slim navigation, and a lively circular order prompt. The implemented page preserves those cues while replacing all branding, copy, imagery, and products with original Crumb & Candle content.
 
 The product controls are visually visible in the browser. Browser validation confirms that adding a product updates the compact header count, reveals quantity controls, recalculates the basket total, and emits a concise confirmation notice.
+
+## Fidelity Correction — Supplied Screenshot References
+
+The latest screenshots supersede the previous motion interpretation. The corrected build should follow these visible rules: a **solid white, generously padded header** with charcoal logo and navigation; a hero that becomes a rounded-corner image canvas at lower scroll positions; saturated **teal** display headlines on pale cream; round-cornered, clean food tiles rather than editorial product cards; and a horizontal image rail that **moves continuously from right to left**. Pink should be used as a small, deliberate CTA and outline accent, never as a page-wide fill. The call-first WhatsApp flow remains, but it should read as a minimal icon-plus-label action rather than a shopping feature.
