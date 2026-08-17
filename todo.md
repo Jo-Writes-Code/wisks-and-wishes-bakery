@@ -1,7 +1,6 @@
-# Product, Pricing, and Navigation Refinement Checklist
+# Header Alignment and Icon Restoration Checklist
 
-- [x] Match the product-image top-corner rounding to the smaller current lower-corner rounding.
-- [x] Raise the product frames above the protruding images without shifting card content and convert prices to Tanzanian shillings.
-- [x] Reduce navigation height, preserve the logo size, and add a thick header-colored logo border.
-- [x] Replace the header WhatsApp glyph with a reliable CSS-drawn icon.
-- [x] Verify desktop and mobile behavior, then save and deliver the checkpoint.
+- [x] Restore the fully visible left logo, centered navigation, and right-aligned order button.
+- [x] Replace placeholder glyphs with proper WhatsApp and Instagram icons in header and footer actions.
+- [x] Make the thick logo border transparent initially and fade it to the white header color only after scroll.
+- [x] Verify desktop and mobile header alignment and scrolling behavior, then deliver the checkpoint.
