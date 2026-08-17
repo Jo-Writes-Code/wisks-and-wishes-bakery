@@ -1,8 +1,8 @@
-# Scroll Motion Refinement Checklist
+# Bestseller Loop and Spacing Refinement Checklist
 
-- [x] Keep the hero square-edged at the top and round its lower corners progressively after scrolling.
-- [x] Add a scroll-driven parallax shift to the hero text.
-- [x] Move the product background text lower behind the cards.
-- [x] Render four moving text rows with alternating horizontal directions.
-- [x] Verify motion and layout across desktop and mobile.
-- [ ] Save and deliver the refined checkpoint.
+- [x] Change all four animated background rows to the word “BESTSELLERS.”
+- [x] Use smaller, rounder lettering with a reduced text height and even non-overlapping row spacing.
+- [x] Build an actually seamless alternating animation loop without any visible jump or teleport.
+- [x] Tighten and rebalance the statement section’s vertical whitespace against the rest of the page.
+- [x] Verify motion continuity and responsive spacing.
+- [ ] Save and deliver the polished checkpoint.

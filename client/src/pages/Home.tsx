@@ -22,6 +22,8 @@ const productCards = [
   { name: "CARDAMOM BUN", details: "orange sugar · pearl sugar", price: "$5", image: "/manus-storage/crumb-candle-buns_e1bdde8f.jpg" },
 ];
 
+const bestsellerWords = Array.from({ length: 7 }, () => "BESTSELLERS");
+
 function scrollToSection(target: string) {
   document.querySelector(target)?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
@@ -95,18 +97,15 @@ export default function Home() {
 
         <section id="bakes" className="bestseller-section">
           <div className="bestseller-background" aria-hidden="true">
-            <div className="bestseller-word-track bestseller-word-track--one">
-              {["BESTSELLERS", "BESTSELLERS", "BESTSELLERS", "BESTSELLERS"].map((word, index) => <span key={index}>{word}</span>)}
-            </div>
-            <div className="bestseller-word-track bestseller-word-track--two">
-              {["FRESH TODAY", "FRESH TODAY", "FRESH TODAY", "FRESH TODAY"].map((word, index) => <span key={index}>{word}</span>)}
-            </div>
-            <div className="bestseller-word-track bestseller-word-track--three">
-              {["CALL TO ORDER", "CALL TO ORDER", "CALL TO ORDER", "CALL TO ORDER"].map((word, index) => <span key={index}>{word}</span>)}
-            </div>
-            <div className="bestseller-word-track bestseller-word-track--four">
-              {["SMALL BATCH", "SMALL BATCH", "SMALL BATCH", "SMALL BATCH"].map((word, index) => <span key={index}>{word}</span>)}
-            </div>
+            {["left", "right", "left", "right"].map((direction, rowIndex) => (
+              <div className={`bestseller-word-track bestseller-word-track--${direction} bestseller-word-track--row-${rowIndex + 1}`} key={`${direction}-${rowIndex}`}>
+                {[0, 1].map((groupIndex) => (
+                  <div className="bestseller-word-group" key={groupIndex}>
+                    {bestsellerWords.map((word, wordIndex) => <span key={wordIndex}>{word}</span>)}
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
           <div className="bestseller-heading">
             <p className="section-label"><Sparkles size={14} /> FROM TODAY’S COUNTER</p>
