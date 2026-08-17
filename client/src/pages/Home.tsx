@@ -2,6 +2,7 @@
  * Design reminder: Cream + teal bakery editorial, solid white header, giant sans headlines,
  * rounded food imagery, a right-to-left product rail, and minimal pink WhatsApp call actions.
  */
+import { useEffect, useState } from "react";
 import { ArrowUpRight, Instagram, MapPin, MessageCircle, Phone, Sparkles } from "lucide-react";
 
 const whatsappNumber = "15551234567";
@@ -15,14 +16,29 @@ const railItems = [
   { image: "/manus-storage/crumb-candle-hero_e9ad0c85.jpg", alt: "A colourful bakery spread" },
 ];
 
+const productCards = [
+  { name: "MIDNIGHT CHUNK", details: "dark chocolate · sea salt", price: "$4", image: "/manus-storage/crumb-candle-cookies_d4713f1f.jpg" },
+  { name: "SPRINKLE CAKE", details: "vanilla bean · berry jam", price: "$38", image: "/manus-storage/crumb-candle-cake_a9d2c0a4.jpg" },
+  { name: "CARDAMOM BUN", details: "orange sugar · pearl sugar", price: "$5", image: "/manus-storage/crumb-candle-buns_e1bdde8f.jpg" },
+];
+
 function scrollToSection(target: string) {
   document.querySelector(target)?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 export default function Home() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateHeader = () => setScrolled(window.scrollY > 24);
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    return () => window.removeEventListener("scroll", updateHeader);
+  }, []);
+
   return (
     <div className="reference-page">
-      <header className="reference-header">
+      <header className={`reference-header ${scrolled ? "reference-header--scrolled" : ""}`}>
         <a className="reference-brand" href="#home" onClick={(event) => { event.preventDefault(); scrollToSection("#home"); }}>
           CRUMB &amp; CANDLE
         </a>
@@ -70,27 +86,38 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="bakes" className="rail-section">
-          <div className="rail-title-row">
-            <div>
-              <p className="section-label"><Sparkles size={14} /> FROM TODAY’S COUNTER</p>
-              <h2>LOOK WHAT<br />JUST CAME<br />OUT.</h2>
+        <section id="bakes" className="bestseller-section">
+          <div className="bestseller-background" aria-hidden="true">
+            <div className="bestseller-word-track bestseller-word-track--outline">
+              {["BESTSELLERS", "BESTSELLERS", "BESTSELLERS", "BESTSELLERS"].map((word, index) => <span key={index}>{word}</span>)}
             </div>
-            <a href={whatsappUrl("Hi Crumb & Candle! I’d like to order from today’s counter.")} target="_blank" rel="noreferrer" className="outlined-pill">WHATSAPP TO ORDER <MessageCircle size={17} /></a>
-          </div>
-          <div className="rail-window" aria-label="Continuously moving selection of bakery treats">
-            <div className="rail-track">
-              {[...railItems, ...railItems].map((item, index) => (
-                <figure className="rail-card" key={`${item.alt}-${index}`}>
-                  <img src={item.image} alt={index < railItems.length ? item.alt : ""} />
-                </figure>
-              ))}
+            <div className="bestseller-word-track bestseller-word-track--solid">
+              {["FRESH TODAY", "FRESH TODAY", "FRESH TODAY", "FRESH TODAY"].map((word, index) => <span key={index}>{word}</span>)}
             </div>
           </div>
-          <div className="rail-meta">
-            <p>THE COUNTER MOVES FAST. OUR MENU DOES TOO.</p>
-            <a href={whatsappUrl("Hi Crumb & Candle! I’d like to check what’s available.")} target="_blank" rel="noreferrer">CHECK AVAILABILITY <ArrowUpRight size={17} /></a>
+          <div className="bestseller-heading">
+            <p className="section-label"><Sparkles size={14} /> FROM TODAY’S COUNTER</p>
+            <h2>FRESHLY<br />PICKED.</h2>
           </div>
+          <div className="bestseller-card-row">
+            {productCards.map((product, index) => (
+              <article className="bestseller-card" key={product.name}>
+                <div className="bestseller-image"><img src={product.image} alt={product.name.toLowerCase()} /></div>
+                <div className="bestseller-details">
+                  <span className="product-index">0{index + 1}</span>
+                  <div>
+                    <h3>{product.name}</h3>
+                    <p>{product.details}</p>
+                  </div>
+                  <strong>{product.price}</strong>
+                </div>
+                <a className="bestseller-action" href={whatsappUrl(`Hi Crumb & Candle! I’d like to order the ${product.name}. Is it available?`)} target="_blank" rel="noreferrer">
+                  WHATSAPP TO ORDER <MessageCircle size={17} />
+                </a>
+              </article>
+            ))}
+          </div>
+          <p className="bestseller-note">OUR BAKES MOVE FAST — WHATSAPP US TO CHECK WHAT’S ON THE COUNTER.</p>
         </section>
 
         <section id="pickup" className="call-section">

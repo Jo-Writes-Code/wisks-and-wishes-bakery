@@ -1,10 +1,8 @@
-# Visual Fidelity Revision Checklist
+# Header, Hero, and Product Section Correction
 
-- [x] Shift the visual system from cocoa-and-gold to the reference’s cream, teal, charcoal, and pink palette.
-- [x] Rebuild the header as a solid white navigation bar that can visually transition into the hero.
-- [x] Recompose the hero around a giant editorial headline and tilted pink round call-to-action.
-- [x] Replace the static product grid with a continuous right-to-left moving image rail of rounded food cards.
-- [x] Add the reference’s rounded-image editorial section and simpler outlined/pill controls.
-- [x] Keep WhatsApp call-first ordering but remove any cart-like visual cues.
-- [x] Verify desktop and mobile visual fidelity, movement, and navigation.
+- [x] Start the header as transparent over the hero and transition it to white only after scrolling.
+- [x] Keep the hero headline completely visible within the initial viewport on desktop and mobile.
+- [x] Replace the post-statement rail with three rounded product cards over oversized moving background words.
+- [x] Keep product actions WhatsApp-first, without restoring a cart or checkout workflow.
+- [x] Verify the interaction and layout changes on desktop and mobile.
 - [ ] Save and deliver the corrected checkpoint.
