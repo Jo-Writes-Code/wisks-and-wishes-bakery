@@ -1,8 +1,8 @@
-# Header, Hero, and Product Section Correction
+# Scroll Motion Refinement Checklist
 
-- [x] Start the header as transparent over the hero and transition it to white only after scrolling.
-- [x] Keep the hero headline completely visible within the initial viewport on desktop and mobile.
-- [x] Replace the post-statement rail with three rounded product cards over oversized moving background words.
-- [x] Keep product actions WhatsApp-first, without restoring a cart or checkout workflow.
-- [x] Verify the interaction and layout changes on desktop and mobile.
-- [ ] Save and deliver the corrected checkpoint.
+- [x] Keep the hero square-edged at the top and round its lower corners progressively after scrolling.
+- [x] Add a scroll-driven parallax shift to the hero text.
+- [x] Move the product background text lower behind the cards.
+- [x] Render four moving text rows with alternating horizontal directions.
+- [x] Verify motion and layout across desktop and mobile.
+- [ ] Save and deliver the refined checkpoint.

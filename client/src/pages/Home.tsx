@@ -30,7 +30,14 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const updateHeader = () => setScrolled(window.scrollY > 24);
+    const updateHeader = () => {
+      const scrollY = window.scrollY;
+      const progress = Math.min(scrollY / Math.max(window.innerHeight * 0.52, 1), 1);
+      setScrolled(scrollY > 24);
+      document.documentElement.style.setProperty("--hero-round", `${progress * 82}px`);
+      document.documentElement.style.setProperty("--hero-copy-parallax", `${Math.min(scrollY * -0.13, 72)}px`);
+      document.documentElement.style.setProperty("--hero-copy-fade", `${1 - progress * 0.18}`);
+    };
     updateHeader();
     window.addEventListener("scroll", updateHeader, { passive: true });
     return () => window.removeEventListener("scroll", updateHeader);
@@ -88,11 +95,17 @@ export default function Home() {
 
         <section id="bakes" className="bestseller-section">
           <div className="bestseller-background" aria-hidden="true">
-            <div className="bestseller-word-track bestseller-word-track--outline">
+            <div className="bestseller-word-track bestseller-word-track--one">
               {["BESTSELLERS", "BESTSELLERS", "BESTSELLERS", "BESTSELLERS"].map((word, index) => <span key={index}>{word}</span>)}
             </div>
-            <div className="bestseller-word-track bestseller-word-track--solid">
+            <div className="bestseller-word-track bestseller-word-track--two">
               {["FRESH TODAY", "FRESH TODAY", "FRESH TODAY", "FRESH TODAY"].map((word, index) => <span key={index}>{word}</span>)}
+            </div>
+            <div className="bestseller-word-track bestseller-word-track--three">
+              {["CALL TO ORDER", "CALL TO ORDER", "CALL TO ORDER", "CALL TO ORDER"].map((word, index) => <span key={index}>{word}</span>)}
+            </div>
+            <div className="bestseller-word-track bestseller-word-track--four">
+              {["SMALL BATCH", "SMALL BATCH", "SMALL BATCH", "SMALL BATCH"].map((word, index) => <span key={index}>{word}</span>)}
             </div>
           </div>
           <div className="bestseller-heading">
