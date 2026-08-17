@@ -5,7 +5,7 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Instagram, MapPin, MessageCircle, Phone, Sparkles } from "lucide-react";
 
-const whatsappNumber = "15551234567";
+const whatsappNumber = "255782207751";
 const whatsappUrl = (message: string) =>
   `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
@@ -49,7 +49,7 @@ export default function Home() {
     <div className="reference-page">
       <header className={`reference-header ${scrolled ? "reference-header--scrolled" : ""}`}>
         <a className="reference-brand" href="#home" onClick={(event) => { event.preventDefault(); scrollToSection("#home"); }}>
-          CRUMB &amp; CANDLE
+          <img src="/manus-storage/wisks-and-wishes-logo_84447e9b.png" alt="Wisks and Wishes" />
         </a>
         <nav className="reference-nav" aria-label="Primary navigation">
           {[
@@ -61,7 +61,7 @@ export default function Home() {
             <a key={target} href={target} onClick={(event) => { event.preventDefault(); scrollToSection(target); }}>{label}</a>
           ))}
         </nav>
-        <a className="header-whatsapp" href={whatsappUrl("Hi Crumb & Candle! I’d like to place an order.")} target="_blank" rel="noreferrer" aria-label="Order by WhatsApp">
+        <a className="header-whatsapp" href={whatsappUrl("Hi Wisks and Wishes! I’d like to place an order.")} target="_blank" rel="noreferrer" aria-label="Order by WhatsApp">
           <MessageCircle size={25} strokeWidth={1.7} />
           <span>ORDER</span>
         </a>
@@ -72,10 +72,10 @@ export default function Home() {
           <div className="hero-cover" />
           <div className="hero-vignette" />
           <div className="hero-copy">
-            <p>CRUMB &amp; CANDLE · SMALL-BATCH BAKERY</p>
+            <p>WISKS &amp; WISHES · SMALL-BATCH BAKERY</p>
             <h1>BAKED FOR<br />THE BIG<br />FEELINGS.</h1>
           </div>
-          <a className="indulge-disc" href={whatsappUrl("Hi Crumb & Candle! What’s fresh today?")} target="_blank" rel="noreferrer">
+          <a className="indulge-disc" href={whatsappUrl("Hi Wisks and Wishes! What’s fresh today?")} target="_blank" rel="noreferrer">
             <span>CALL /<br />WHATSAPP</span>
             <Phone size={30} strokeWidth={2} />
           </a>
@@ -89,7 +89,7 @@ export default function Home() {
           </div>
           <div className="statement-copy">
             <p>We bake the things that make an ordinary Tuesday feel more like a tiny celebration: thick cookies, layered cakes, warm buns, and something sweet for the walk home.</p>
-            <a href={whatsappUrl("Hi Crumb & Candle! I’d like to know what’s fresh today.")} target="_blank" rel="noreferrer" className="underlined-link">
+            <a href={whatsappUrl("Hi Wisks and Wishes! I’d like to know what’s fresh today.")} target="_blank" rel="noreferrer" className="underlined-link">
               ASK WHAT’S FRESH <ArrowUpRight size={18} />
             </a>
           </div>
@@ -125,7 +125,7 @@ export default function Home() {
                   </div>
                   <strong>{product.price}</strong>
                 </div>
-                <a className="bestseller-action" href={whatsappUrl(`Hi Crumb & Candle! I’d like to order the ${product.name}. Is it available?`)} target="_blank" rel="noreferrer">
+                <a className="bestseller-action" href={whatsappUrl(`Hi Wisks and Wishes! I’d like to order the ${product.name}. Is it available?`)} target="_blank" rel="noreferrer">
                   WHATSAPP TO ORDER <MessageCircle size={17} />
                 </a>
               </article>
@@ -144,22 +144,27 @@ export default function Home() {
             <p className="section-label"><Sparkles size={14} /> PICKUP, NOT CHECKOUT</p>
             <h2>WE’LL KEEP<br />YOUR BOX<br />BY THE OVEN.</h2>
             <p>Message us your order, and we’ll reply with what’s available and the next pickup window. No cart, no fuss, just treats.</p>
-            <a className="call-button" href={whatsappUrl("Hi Crumb & Candle! I’d like to place an order for pickup.")} target="_blank" rel="noreferrer">
-              WHATSAPP US <MessageCircle size={21} />
-            </a>
-            <div className="call-details">
-              <span><MapPin size={16} /> 28 SUGAR LANE · EASTSIDE</span>
-              <span><Phone size={16} /> +1 (555) 123-4567</span>
+            <div className="call-actions">
+              <a className="call-button" href={whatsappUrl("Hi Wisks and Wishes! I’d like to place an order for pickup.")} target="_blank" rel="noreferrer">
+                WHATSAPP US <MessageCircle size={21} />
+              </a>
+              <a className="instagram-button" href="https://www.instagram.com/wiskandwishes" target="_blank" rel="noreferrer">
+                INSTAGRAM <Instagram size={19} />
+              </a>
             </div>
-            <p className="placeholder-note">PLACEHOLDER NUMBER · REPLACE BEFORE LAUNCH</p>
+            <div className="call-details">
+              <span><MapPin size={16} /> DODOMA · TANZANIA</span>
+              <a href="tel:+255782207751"><Phone size={16} /> +255 782 207 751</a>
+            </div>
+            <p className="placeholder-note">CALL OR WHATSAPP TO ORDER</p>
           </div>
         </section>
       </main>
 
       <footer className="reference-footer">
-        <span>CRUMB &amp; CANDLE</span>
+        <span>WISKS &amp; WISHES</span>
         <p>BAKED IN SMALL BATCHES · MADE FOR BIG MOMENTS</p>
-        <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={19} /></a>
+        <a href="https://www.instagram.com/wiskandwishes" target="_blank" rel="noreferrer" aria-label="Wisks and Wishes on Instagram"><Instagram size={19} /></a>
       </footer>
     </div>
   );

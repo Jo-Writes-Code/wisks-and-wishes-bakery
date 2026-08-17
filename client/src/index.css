@@ -1,5 +1,5 @@
 /*
- * Design reminder: Cream + teal bakery editorial, solid white header, giant sans headlines,
+ * Design reminder: Wisks and Wishes uses a cream + teal bakery editorial, supplied circular logo, giant sans headlines,
  * rounded food imagery, a right-to-left product rail, and minimal pink WhatsApp call actions.
  */
 @import "tailwindcss";
@@ -61,12 +61,14 @@ img { display: block; max-width: 100%; }
 }
 .reference-header--scrolled { background: var(--white); box-shadow: 0 1px 0 rgba(17, 39, 51, 0.13); color: var(--ink); text-shadow: none; }
 .reference-brand { font-family: Anton, Impact, sans-serif; font-size: clamp(1.6rem, 2.3vw, 2.45rem); font-weight: 400; letter-spacing: 0.025em; line-height: 0.82; max-width: 9.5rem; text-decoration: none; }
+.reference-brand img { border-radius: 50%; display: block; height: clamp(5rem, 7.1vw, 7.2rem); object-fit: cover; width: clamp(5rem, 7.1vw, 7.2rem); }
 .reference-nav { align-items: center; display: flex; gap: clamp(1.4rem, 3.8vw, 4rem); }
-.reference-nav a, .header-whatsapp { color: inherit; font-family: Anton, Impact, sans-serif; font-size: clamp(0.8rem, 1.05vw, 1.08rem); letter-spacing: 0.015em; text-decoration: none; }
+.reference-nav a, .header-whatsapp { color: inherit; font-family: Anton, Impact, sans-serif; font-size: clamp(0.95rem, 1.25vw, 1.25rem); letter-spacing: 0.015em; text-decoration: none; }
 .reference-nav a { transition: color 150ms var(--ease-out); }
 .reference-nav a:hover { color: var(--teal); }
-.header-whatsapp { align-items: center; display: flex; gap: 0.45rem; justify-self: end; }
-.header-whatsapp span { font-family: "DM Mono", monospace; font-size: 0.62rem; letter-spacing: 0.08em; }
+.header-whatsapp { align-items: center; background: #42985c; border-radius: 999px; color: white; display: flex; gap: 0.5rem; justify-self: end; padding: 0.8rem 1.15rem; text-shadow: none; transition: background 160ms var(--ease-out), transform 160ms var(--ease-out); }
+.header-whatsapp:hover { background: #2e7744; transform: translateY(-2px); }
+.header-whatsapp span { font-family: Anton, Impact, sans-serif; font-size: 0.95rem; letter-spacing: 0.04em; }
 
 .reference-hero { border-radius: 0 0 var(--hero-round) var(--hero-round); color: var(--white); height: 100svh; min-height: 40rem; overflow: hidden; padding: clamp(2rem, 5vw, 4rem); position: relative; transition: border-radius 80ms linear; }
 .hero-cover { background: url("/manus-storage/crumb-candle-hero_e9ad0c85.jpg") 51% 48% / cover no-repeat; inset: 0; position: absolute; transform: scale(1.035); }
@@ -119,8 +121,12 @@ img { display: block; max-width: 100%; }
 .call-copy > p:not(.section-label):not(.placeholder-note) { font-family: Arial, sans-serif; font-size: 1.15rem; letter-spacing: -0.015em; line-height: 1.4; margin: 1.9rem 0 2.1rem; max-width: 27rem; }
 .call-button { align-items: center; background: var(--pink); border-radius: 999px; color: var(--ink); display: inline-flex; font-family: Anton, Impact, sans-serif; font-size: 1.1rem; gap: 0.55rem; padding: 1.1rem 1.65rem; text-decoration: none; transition: transform 160ms var(--ease-out), background 160ms var(--ease-out); }
 .call-button:hover { background: var(--white); transform: translateY(-3px); }
+.call-actions { align-items: center; display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.instagram-button { align-items: center; border: 2px solid var(--cream); border-radius: 999px; color: var(--cream); display: inline-flex; font-family: Anton, Impact, sans-serif; font-size: 1rem; gap: 0.48rem; padding: calc(1.1rem - 2px) 1.35rem; text-decoration: none; transition: background 160ms var(--ease-out), color 160ms var(--ease-out), transform 160ms var(--ease-out); }
+.instagram-button:hover { background: var(--cream); color: var(--teal); transform: translateY(-3px); }
 .call-details { display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; margin-top: 2rem; }
-.call-details span { align-items: center; display: flex; font-size: 0.62rem; gap: 0.36rem; letter-spacing: 0.05em; }
+.call-details span, .call-details a { align-items: center; color: inherit; display: flex; font-size: 0.62rem; gap: 0.36rem; letter-spacing: 0.05em; text-decoration: none; }
+.call-details a:hover { text-decoration: underline; text-underline-offset: 0.24rem; }
 .placeholder-note { color: rgba(247, 246, 239, 0.65); font-size: 0.55rem; letter-spacing: 0.07em; margin: 1rem 0 0; }
 
 .reference-footer { align-items: center; background: var(--pink); color: var(--ink); display: grid; grid-template-columns: 1fr 1fr 1fr; min-height: 5.7rem; padding: 1rem clamp(1.5rem, 4vw, 4rem); }
@@ -131,9 +137,11 @@ img { display: block; max-width: 100%; }
 @media (max-width: 840px) {
   .reference-header { min-height: 82px; padding: 1rem 1.2rem; }
   .reference-brand { font-size: 1.6rem; max-width: 6.7rem; }
+  .reference-brand img { height: 4.5rem; width: 4.5rem; }
   .reference-nav { gap: 1rem; }
   .reference-nav a { font-size: 0.75rem; }
-  .header-whatsapp span { display: none; }
+  .header-whatsapp { padding: 0.72rem 0.94rem; }
+  .header-whatsapp span { display: inline; font-size: 0.82rem; }
   .reference-hero { min-height: 39rem; }
   .statement-section { grid-template-columns: 1fr; }
   .statement-copy { max-width: 40rem; }
@@ -146,6 +154,7 @@ img { display: block; max-width: 100%; }
   .reference-header { grid-template-columns: 1fr auto; min-height: 70px; }
   .reference-nav { display: none; }
   .reference-brand { font-size: 1.35rem; max-width: none; }
+  .reference-brand img { height: 3.9rem; width: 3.9rem; }
   .reference-hero { border-radius: 0 0 var(--hero-round) var(--hero-round); height: 100svh; min-height: 39rem; padding: 1.25rem; }
   .hero-copy { bottom: 2rem; left: 1.25rem; }
   .hero-copy { bottom: 2.1rem; max-width: calc(100% - 8.7rem); }

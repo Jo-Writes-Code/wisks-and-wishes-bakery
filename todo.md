@@ -1,6 +1,8 @@
-# Fixed-Spacing Diagonal Marquee Correction
+# Wisks and Wishes Rebrand Checklist
 
-- [x] Move every marquee row along a true diagonal path rather than a horizontal path.
-- [x] Keep all four rows parallel with unchanged spacing throughout the loop.
-- [x] Preserve the duplicated-text seamless loop and responsive containment.
-- [x] Verify the new diagonal path behavior and deliver the checkpoint.
+- [x] Use the supplied logo at a clearly visible size in the top-left navigation.
+- [x] Replace visible Crumb & Candle branding with Wisks and Wishes.
+- [x] Enlarge navigation text and add a green rounded order button in the header.
+- [x] Update Instagram links, add an Instagram action beside WhatsApp, and set Dodoma, Tanzania and the provided phone number.
+- [x] Verify the rebranded layout on desktop and mobile.
+- [ ] Save and deliver the final checkpoint.
