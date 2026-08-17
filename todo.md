@@ -1,7 +1,6 @@
-# Semicircular Frame Refinement Checklist
+# Product Frame Correction Checklist
 
-- [x] Give the top two corners of the three product frames and both pickup images a pronounced semicircular arch.
-- [x] Keep the lower frame corners rounded but substantially less than the upper corners.
-- [x] Thicken the teal product-card outlines and let product images protrude beyond their frames.
-- [x] Add a product-image hover zoom and enlarge and shift the hero WhatsApp circle slightly left.
-- [x] Verify the desktop and mobile framing treatment, then save and deliver the checkpoint.
+- [x] Restore the original tall product-card height with the frame visibly extending above each image.
+- [x] Keep semicircular rounding only on the outer product frame.
+- [x] Return the three product images to their prior unrounded, unmasked appearance.
+- [x] Verify the corrected cards on desktop and mobile, then deliver the checkpoint.
