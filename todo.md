@@ -1,8 +1,7 @@
-# Bestseller Loop and Spacing Refinement Checklist
+# Diagonal Seamless Marquee Refinement
 
-- [x] Change all four animated background rows to the word “BESTSELLERS.”
-- [x] Use smaller, rounder lettering with a reduced text height and even non-overlapping row spacing.
-- [x] Build an actually seamless alternating animation loop without any visible jump or teleport.
-- [x] Tighten and rebalance the statement section’s vertical whitespace against the rest of the page.
-- [x] Verify motion continuity and responsive spacing.
-- [ ] Save and deliver the polished checkpoint.
+- [x] Restore the previous display font for the moving background rows.
+- [x] Arrange four parallel diagonal rows with alternating ↙ and ↗ movement.
+- [x] Use duplicated text groups and a linear infinite transform loop with no gap, jump, or reset.
+- [x] Prevent horizontal overflow and preserve behavior across desktop and mobile screens.
+- [x] Verify the live animation and deliver the refined checkpoint.
