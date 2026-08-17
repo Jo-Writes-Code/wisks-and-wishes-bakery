@@ -1,6 +1,7 @@
-# Dramatic Wide Typography Checklist
+# Static HTML, CSS, and JavaScript Reorganization
 
-- [x] Use a visibly expanded, heavyweight horizontal type treatment rather than a subtle tracking adjustment.
-- [x] Apply the expansion to supporting text, navigation, card labels, actions, and footer content.
-- [x] Prevent overflow and preserve a readable hierarchy on desktop and mobile.
-- [x] Verify the stronger typography change and deliver the checkpoint.
+- [x] Create a simple `index.html`, `css/style.css`, and `js/main.js` structure.
+- [x] Preserve the existing visual layout, navigation, scroll effects, and WhatsApp interactions without React.
+- [x] Add an `assets` directory with a clear manifest for the site’s image and video references.
+- [x] Validate the static page on desktop and mobile.
+- [ ] Save and deliver the static-site checkpoint.

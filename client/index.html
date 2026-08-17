@@ -2,17 +2,111 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <meta name="theme-color" content="#f4f0e6" />
-    <meta name="description" content="Crumb & Candle Bakery — small-batch treats baked daily." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Wisks and Wishes — small-batch bakery in Dodoma, Tanzania." />
+    <title>Wisks and Wishes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    <title>Wisks and Wishes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script defer src="%VITE_ANALYTICS_ENDPOINT%/umami" data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+    <header class="site-header" data-header>
+      <a class="brand-logo" href="#home" aria-label="Wisks and Wishes home">
+        <img src="/manus-storage/wisks-and-wishes-logo_84447e9b.png" alt="Wisks and Wishes" />
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#home">HOME</a>
+        <a href="#bakes">BAKES</a>
+        <a href="#about">ABOUT</a>
+        <a href="#pickup">PICKUP</a>
+      </nav>
+      <a class="order-button" href="https://wa.me/255782207751?text=Hi%20Wisks%20and%20Wishes!%20I%E2%80%99d%20like%20to%20place%20an%20order." target="_blank" rel="noreferrer">
+        <span aria-hidden="true">◌</span> ORDER
+      </a>
+    </header>
+
+    <main>
+      <section id="home" class="hero-section">
+        <div class="hero-image" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-copy" data-hero-copy>
+          <p>WISKS &amp; WISHES · SMALL-BATCH BAKERY</p>
+          <h1>BAKED FOR<br />THE BIG<br />FEELINGS.</h1>
+        </div>
+        <a class="hero-callout" href="https://wa.me/255782207751?text=Hi%20Wisks%20and%20Wishes!%20What%E2%80%99s%20fresh%20today%3F" target="_blank" rel="noreferrer">
+          CALL /<br />WHATSAPP<br /><span aria-hidden="true">⌕</span>
+        </a>
+        <p class="hero-side-note">TUE—SAT · 8—4 · PICKUP ONLY</p>
+      </section>
+
+      <section id="about" class="statement-section">
+        <div>
+          <p class="eyebrow">✦ THE DAILY GOOD STUFF</p>
+          <h2>THE KIND OF<br />GOOD THAT<br />STICKS WITH<br />YOU.</h2>
+        </div>
+        <div class="statement-copy">
+          <p>We bake the things that make an ordinary Tuesday feel more like a tiny celebration: thick cookies, layered cakes, warm buns, and something sweet for the walk home.</p>
+          <a class="underlined-link" href="https://wa.me/255782207751?text=Hi%20Wisks%20and%20Wishes!%20I%E2%80%99d%20like%20to%20know%20what%E2%80%99s%20fresh%20today." target="_blank" rel="noreferrer">ASK WHAT’S FRESH ↗</a>
+        </div>
+      </section>
+
+      <section id="bakes" class="bakes-section">
+        <div class="marquee-background" aria-hidden="true">
+          <div class="marquee-lane lane-one"><div class="marquee-track"><div class="marquee-group">BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS</div><div class="marquee-group">BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS</div></div></div>
+          <div class="marquee-lane lane-two"><div class="marquee-track"><div class="marquee-group">BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS</div><div class="marquee-group">BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS</div></div></div>
+          <div class="marquee-lane lane-three"><div class="marquee-track"><div class="marquee-group">BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS</div><div class="marquee-group">BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS</div></div></div>
+          <div class="marquee-lane lane-four"><div class="marquee-track"><div class="marquee-group">BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS</div><div class="marquee-group">BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS BESTSELLERS</div></div></div>
+        </div>
+        <div class="section-intro">
+          <p class="eyebrow">✦ FROM TODAY’S COUNTER</p>
+          <h2>FRESHLY<br />PICKED.</h2>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="/manus-storage/crumb-candle-cookies_d4713f1f.jpg" alt="Midnight chunk cookie" />
+            <div class="product-meta"><span>01</span><div><h3>MIDNIGHT CHUNK</h3><p>dark chocolate · sea salt</p></div><strong>$4</strong></div>
+            <a href="https://wa.me/255782207751?text=Hi%20Wisks%20and%20Wishes!%20I%E2%80%99d%20like%20to%20order%20the%20MIDNIGHT%20CHUNK.%20Is%20it%20available%3F" target="_blank" rel="noreferrer">WHATSAPP TO ORDER ◌</a>
+          </article>
+          <article class="product-card">
+            <img src="/manus-storage/crumb-candle-cake_a9d2c0a4.jpg" alt="Sprinkle cake slice" />
+            <div class="product-meta"><span>02</span><div><h3>SPRINKLE CAKE</h3><p>vanilla bean · berry jam</p></div><strong>$38</strong></div>
+            <a href="https://wa.me/255782207751?text=Hi%20Wisks%20and%20Wishes!%20I%E2%80%99d%20like%20to%20order%20the%20SPRINKLE%20CAKE.%20Is%20it%20available%3F" target="_blank" rel="noreferrer">WHATSAPP TO ORDER ◌</a>
+          </article>
+          <article class="product-card">
+            <img src="/manus-storage/crumb-candle-buns_e1bdde8f.jpg" alt="Cardamom buns" />
+            <div class="product-meta"><span>03</span><div><h3>CARDAMOM BUN</h3><p>orange sugar · pearl sugar</p></div><strong>$5</strong></div>
+            <a href="https://wa.me/255782207751?text=Hi%20Wisks%20and%20Wishes!%20I%E2%80%99d%20like%20to%20order%20the%20CARDAMOM%20BUN.%20Is%20it%20available%3F" target="_blank" rel="noreferrer">WHATSAPP TO ORDER ◌</a>
+          </article>
+        </div>
+        <p class="counter-note">OUR BAKES MOVE FAST — WHATSAPP US TO CHECK WHAT’S ON THE COUNTER.</p>
+      </section>
+
+      <section id="pickup" class="pickup-section">
+        <div class="pickup-visual" aria-hidden="true">
+          <img class="pickup-cookie" src="/manus-storage/crumb-candle-cookies_d4713f1f.jpg" alt="" />
+          <img class="pickup-cake" src="/manus-storage/crumb-candle-cake_a9d2c0a4.jpg" alt="" />
+          <span class="pickup-sticker">PICKUP<br />IS A<br />LOVE NOTE.</span>
+        </div>
+        <div class="pickup-copy">
+          <p class="eyebrow">✦ PICKUP, NOT CHECKOUT</p>
+          <h2>WE’LL KEEP<br />YOUR BOX<br />BY THE OVEN.</h2>
+          <p>Message us your order, and we’ll reply with what’s available and the next pickup window. No cart, no fuss, just treats.</p>
+          <div class="contact-actions">
+            <a class="pink-action" href="https://wa.me/255782207751?text=Hi%20Wisks%20and%20Wishes!%20I%E2%80%99d%20like%20to%20place%20an%20order%20for%20pickup." target="_blank" rel="noreferrer">WHATSAPP US ◌</a>
+            <a class="outline-action" href="https://www.instagram.com/wiskandwishes" target="_blank" rel="noreferrer">INSTAGRAM ◎</a>
+          </div>
+          <div class="contact-details"><span>⌖ DODOMA · TANZANIA</span><a href="tel:+255782207751">⌕ +255 782 207 751</a></div>
+          <small>CALL OR WHATSAPP TO ORDER</small>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <strong>WISKS &amp; WISHES</strong>
+      <p>BAKED IN SMALL BATCHES · MADE FOR BIG MOMENTS</p>
+      <a href="https://www.instagram.com/wiskandwishes" target="_blank" rel="noreferrer" aria-label="Wisks and Wishes on Instagram">◎</a>
+    </footer>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
