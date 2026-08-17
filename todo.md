@@ -1,7 +1,6 @@
-# Diagonal Seamless Marquee Refinement
+# Fixed-Spacing Diagonal Marquee Correction
 
-- [x] Restore the previous display font for the moving background rows.
-- [x] Arrange four parallel diagonal rows with alternating ↙ and ↗ movement.
-- [x] Use duplicated text groups and a linear infinite transform loop with no gap, jump, or reset.
-- [x] Prevent horizontal overflow and preserve behavior across desktop and mobile screens.
-- [x] Verify the live animation and deliver the refined checkpoint.
+- [x] Move every marquee row along a true diagonal path rather than a horizontal path.
+- [x] Keep all four rows parallel with unchanged spacing throughout the loop.
+- [x] Preserve the duplicated-text seamless loop and responsive containment.
+- [x] Verify the new diagonal path behavior and deliver the checkpoint.

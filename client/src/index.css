@@ -178,17 +178,21 @@ img { display: block; max-width: 100%; }
 /* Reference product-card treatment: four parallel diagonal marquee rows use duplicated content for a seamless loop. */
 .bestseller-section { background: var(--cream); color: var(--ink); overflow: hidden; padding: clamp(4.5rem, 7vw, 6.5rem) clamp(1.5rem, 4vw, 4rem) clamp(4.5rem, 7vw, 6.5rem); position: relative; }
 .bestseller-background { inset: 0; overflow: hidden; pointer-events: none; position: absolute; }
-.bestseller-word-track { display: flex; left: -15%; position: absolute; width: max-content; }
+.bestseller-diagonal-lane { left: -14%; overflow: visible; position: absolute; transform: rotate(-8deg); width: 128%; }
+.bestseller-diagonal-lane--row-1 { top: 31%; }
+.bestseller-diagonal-lane--row-2 { top: 44%; }
+.bestseller-diagonal-lane--row-3 { top: 57%; }
+.bestseller-diagonal-lane--row-4 { top: 70%; }
+.bestseller-word-track { display: flex; width: max-content; }
 .bestseller-word-group { display: flex; flex: 0 0 auto; gap: clamp(1.4rem, 2.5vw, 2.6rem); padding-right: clamp(1.4rem, 2.5vw, 2.6rem); }
 .bestseller-word-track span { font-family: Anton, Impact, sans-serif; font-size: clamp(3.5rem, 6.2vw, 6.2rem); font-weight: 400; letter-spacing: 0.01em; line-height: 0.76; white-space: nowrap; }
-.bestseller-word-track--left { animation: diagonal-marquee-left 26s linear infinite; }
-.bestseller-word-track--right { animation: diagonal-marquee-right 26s linear infinite; }
-.bestseller-word-track--row-1 { color: transparent; top: 31%; -webkit-text-stroke: 2px var(--teal); text-stroke: 2px var(--teal); }
-.bestseller-word-track--row-2 { color: rgba(19, 131, 154, 0.92); top: 44%; }
-.bestseller-word-track--row-3 { animation-duration: 30s; color: transparent; top: 57%; -webkit-text-stroke: 2px var(--teal); text-stroke: 2px var(--teal); }
-.bestseller-word-track--row-4 { animation-duration: 30s; color: rgba(19, 131, 154, 0.92); top: 70%; }
-@keyframes diagonal-marquee-left { from { transform: translate3d(0, 0, 0) rotate(-8deg); } to { transform: translate3d(-50%, 9%, 0) rotate(-8deg); } }
-@keyframes diagonal-marquee-right { from { transform: translate3d(-50%, 9%, 0) rotate(-8deg); } to { transform: translate3d(0, 0, 0) rotate(-8deg); } }
+.bestseller-diagonal-lane--left .bestseller-word-track { animation: diagonal-marquee-left 26s linear infinite; }
+.bestseller-diagonal-lane--right .bestseller-word-track { animation: diagonal-marquee-right 26s linear infinite; }
+.bestseller-diagonal-lane--row-1, .bestseller-diagonal-lane--row-3 { color: transparent; -webkit-text-stroke: 2px var(--teal); text-stroke: 2px var(--teal); }
+.bestseller-diagonal-lane--row-2, .bestseller-diagonal-lane--row-4 { color: rgba(19, 131, 154, 0.92); }
+.bestseller-diagonal-lane--row-3 .bestseller-word-track, .bestseller-diagonal-lane--row-4 .bestseller-word-track { animation-duration: 30s; }
+@keyframes diagonal-marquee-left { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
+@keyframes diagonal-marquee-right { from { transform: translate3d(-50%, 0, 0); } to { transform: translate3d(0, 0, 0); } }
 .bestseller-heading { position: relative; z-index: 1; }
 .bestseller-heading .section-label { color: var(--teal); margin-bottom: 1.1rem; }
 .bestseller-heading h2 { color: var(--teal); font-family: Anton, Impact, sans-serif; font-size: clamp(3.4rem, 6.3vw, 6.3rem); font-weight: 400; letter-spacing: 0.01em; line-height: 0.83; margin: 0 0 clamp(2.6rem, 5vw, 4.2rem); }
@@ -218,12 +222,12 @@ img { display: block; max-width: 100%; }
 @media (max-width: 560px) {
   .bestseller-section { padding: 4rem 1.25rem; }
   .bestseller-word-group { gap: 1.15rem; padding-right: 1.15rem; }
-  .bestseller-word-track { left: -28%; }
+  .bestseller-diagonal-lane { left: -31%; width: 162%; }
   .bestseller-word-track span { font-size: 3.55rem; }
-  .bestseller-word-track--row-1 { top: 26%; }
-  .bestseller-word-track--row-2 { top: 40%; }
-  .bestseller-word-track--row-3 { top: 54%; }
-  .bestseller-word-track--row-4 { top: 68%; }
+  .bestseller-diagonal-lane--row-1 { top: 26%; }
+  .bestseller-diagonal-lane--row-2 { top: 40%; }
+  .bestseller-diagonal-lane--row-3 { top: 54%; }
+  .bestseller-diagonal-lane--row-4 { top: 68%; }
   .bestseller-card-row { gap: 1.4rem; grid-template-columns: 1fr; }
   .bestseller-card { border-radius: 1.6rem 1.6rem 0 0; max-width: 28rem; padding: 1rem; }
   .bestseller-image img { aspect-ratio: 1.16 / 1; }

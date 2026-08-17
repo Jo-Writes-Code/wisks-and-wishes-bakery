@@ -98,12 +98,14 @@ export default function Home() {
         <section id="bakes" className="bestseller-section">
           <div className="bestseller-background" aria-hidden="true">
             {["left", "right", "left", "right"].map((direction, rowIndex) => (
-              <div className={`bestseller-word-track bestseller-word-track--${direction} bestseller-word-track--row-${rowIndex + 1}`} key={`${direction}-${rowIndex}`}>
-                {[0, 1].map((groupIndex) => (
-                  <div className="bestseller-word-group" key={groupIndex}>
-                    {bestsellerWords.map((word, wordIndex) => <span key={wordIndex}>{word}</span>)}
-                  </div>
-                ))}
+              <div className={`bestseller-diagonal-lane bestseller-diagonal-lane--${direction} bestseller-diagonal-lane--row-${rowIndex + 1}`} key={`${direction}-${rowIndex}`}>
+                <div className="bestseller-word-track">
+                  {[0, 1].map((groupIndex) => (
+                    <div className="bestseller-word-group" key={groupIndex}>
+                      {bestsellerWords.map((word, wordIndex) => <span key={wordIndex}>{word}</span>)}
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
