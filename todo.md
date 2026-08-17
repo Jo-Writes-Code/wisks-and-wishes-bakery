@@ -1,8 +1,6 @@
-# Wisks and Wishes Rebrand Checklist
+# Wide Typography Refinement Checklist
 
-- [x] Use the supplied logo at a clearly visible size in the top-left navigation.
-- [x] Replace visible Crumb & Candle branding with Wisks and Wishes.
-- [x] Enlarge navigation text and add a green rounded order button in the header.
-- [x] Update Instagram links, add an Instagram action beside WhatsApp, and set Dodoma, Tanzania and the provided phone number.
-- [x] Verify the rebranded layout on desktop and mobile.
-- [ ] Save and deliver the final checkpoint.
+- [x] Establish a wider, more substantial type treatment derived from the hero display style.
+- [x] Apply it consistently to navigation, sections, card labels, actions, and footer text.
+- [x] Preserve readable body-copy proportions while removing the narrow, thin appearance.
+- [x] Verify the type system on desktop and mobile and deliver the checkpoint.

@@ -37,7 +37,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { background: var(--cream); color: var(--ink); font-family: "DM Mono", monospace; margin: 0; overflow-x: hidden; }
+body { background: var(--cream); color: var(--ink); font-family: Anton, Impact, sans-serif; letter-spacing: 0.028em; margin: 0; overflow-x: hidden; }
 a { color: inherit; }
 button, a { font: inherit; }
 a:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
@@ -63,7 +63,7 @@ img { display: block; max-width: 100%; }
 .reference-brand { font-family: Anton, Impact, sans-serif; font-size: clamp(1.6rem, 2.3vw, 2.45rem); font-weight: 400; letter-spacing: 0.025em; line-height: 0.82; max-width: 9.5rem; text-decoration: none; }
 .reference-brand img { border-radius: 50%; display: block; height: clamp(5rem, 7.1vw, 7.2rem); object-fit: cover; width: clamp(5rem, 7.1vw, 7.2rem); }
 .reference-nav { align-items: center; display: flex; gap: clamp(1.4rem, 3.8vw, 4rem); }
-.reference-nav a, .header-whatsapp { color: inherit; font-family: Anton, Impact, sans-serif; font-size: clamp(0.95rem, 1.25vw, 1.25rem); letter-spacing: 0.015em; text-decoration: none; }
+.reference-nav a, .header-whatsapp { color: inherit; font-family: Anton, Impact, sans-serif; font-size: clamp(0.95rem, 1.25vw, 1.25rem); letter-spacing: 0.035em; text-decoration: none; }
 .reference-nav a { transition: color 150ms var(--ease-out); }
 .reference-nav a:hover { color: var(--teal); }
 .header-whatsapp { align-items: center; background: #42985c; border-radius: 999px; color: white; display: flex; gap: 0.5rem; justify-self: end; padding: 0.8rem 1.15rem; text-shadow: none; transition: background 160ms var(--ease-out), transform 160ms var(--ease-out); }
@@ -74,18 +74,18 @@ img { display: block; max-width: 100%; }
 .hero-cover { background: url("/manus-storage/crumb-candle-hero_e9ad0c85.jpg") 51% 48% / cover no-repeat; inset: 0; position: absolute; transform: scale(1.035); }
 .hero-vignette { background: linear-gradient(90deg, rgba(7, 29, 35, 0.51), rgba(7, 29, 35, 0.1) 66%, rgba(7, 29, 35, 0.08)); inset: 0; position: absolute; }
 .hero-copy { bottom: clamp(2.2rem, 4.4vw, 4rem); left: clamp(1.5rem, 4vw, 4rem); max-width: min(64rem, calc(100% - 15rem)); opacity: var(--hero-copy-fade); position: absolute; transform: translate3d(0, var(--hero-copy-parallax), 0); transition: transform 80ms linear, opacity 80ms linear; z-index: 1; }
-.hero-copy p { font-size: 0.63rem; letter-spacing: 0.08em; margin: 0 0 1rem; }
-.hero-copy h1, .statement-section h2, .rail-section h2, .call-copy h2 { font-family: Anton, Impact, sans-serif; font-weight: 400; letter-spacing: 0.01em; line-height: 0.83; margin: 0; text-transform: uppercase; }
+.hero-copy p { font-size: 0.76rem; letter-spacing: 0.095em; margin: 0 0 1rem; }
+.hero-copy h1, .statement-section h2, .rail-section h2, .call-copy h2 { font-family: Anton, Impact, sans-serif; font-weight: 400; letter-spacing: 0.035em; line-height: 0.83; margin: 0; text-transform: uppercase; }
 .hero-copy h1 { font-size: clamp(4.8rem, 9.5vw, 9.5rem); text-shadow: 0 2px 18px rgba(0, 0, 0, 0.2); }
 .indulge-disc { align-items: center; background: var(--pink); border-radius: 50%; color: var(--white); display: flex; flex-direction: column; font-family: Anton, Impact, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.65rem); gap: 1rem; height: clamp(10rem, 14vw, 14rem); justify-content: center; line-height: 1.03; position: absolute; right: clamp(2rem, 7vw, 7rem); text-align: center; text-decoration: none; top: 52%; transform: rotate(-19deg); transition: transform 180ms var(--ease-out), background 180ms var(--ease-out); width: clamp(10rem, 14vw, 14rem); z-index: 1; }
 .indulge-disc:hover { background: #ffb2eb; transform: rotate(-12deg) translateY(-7px); }
-.hero-edge-note { bottom: clamp(2rem, 4vw, 3.2rem); font-size: 0.59rem; letter-spacing: 0.07em; margin: 0; position: absolute; right: clamp(1.5rem, 4vw, 4rem); writing-mode: vertical-rl; z-index: 1; }
+.hero-edge-note { bottom: clamp(2rem, 4vw, 3.2rem); font-size: 0.7rem; letter-spacing: 0.09em; margin: 0; position: absolute; right: clamp(1.5rem, 4vw, 4rem); writing-mode: vertical-rl; z-index: 1; }
 
 .statement-section { color: var(--teal); display: grid; gap: clamp(2rem, 4vw, 3.5rem); grid-template-columns: 1.12fr minmax(18rem, 0.55fr); padding: clamp(4.5rem, 6.5vw, 6.25rem) clamp(1.5rem, 4vw, 4rem); }
-.section-label { align-items: center; display: flex; font-size: 0.63rem; gap: 0.45rem; letter-spacing: 0.075em; margin: 0 0 clamp(2rem, 4vw, 4rem); }
+.section-label { align-items: center; display: flex; font-size: 0.76rem; gap: 0.45rem; letter-spacing: 0.095em; margin: 0 0 clamp(2rem, 4vw, 4rem); }
 .statement-section h2 { font-size: clamp(4rem, 8.2vw, 8.3rem); }
 .statement-copy { align-self: center; max-width: 32rem; }
-.statement-copy > p { font-family: Arial, sans-serif; font-size: clamp(1.18rem, 1.75vw, 1.65rem); font-weight: 400; letter-spacing: -0.025em; line-height: 1.34; margin: 0 0 2.7rem; }
+.statement-copy > p { font-family: Anton, Impact, sans-serif; font-size: clamp(1.34rem, 2.05vw, 1.9rem); font-weight: 400; letter-spacing: 0.025em; line-height: 1.22; margin: 0 0 2.7rem; }
 .underlined-link { align-items: center; border-bottom: 2px solid currentColor; display: inline-flex; font-family: Anton, Impact, sans-serif; font-size: 0.94rem; gap: 0.45rem; padding-bottom: 0.45rem; text-decoration: none; transition: gap 160ms var(--ease-out); }
 .underlined-link:hover { gap: 0.85rem; }
 
@@ -118,20 +118,20 @@ img { display: block; max-width: 100%; }
 .call-copy { align-self: center; }
 .call-copy .section-label { color: rgba(247, 246, 239, 0.78); margin-bottom: 1.3rem; }
 .call-copy h2 { font-size: clamp(4rem, 7vw, 7.4rem); }
-.call-copy > p:not(.section-label):not(.placeholder-note) { font-family: Arial, sans-serif; font-size: 1.15rem; letter-spacing: -0.015em; line-height: 1.4; margin: 1.9rem 0 2.1rem; max-width: 27rem; }
+.call-copy > p:not(.section-label):not(.placeholder-note) { font-family: Anton, Impact, sans-serif; font-size: clamp(1.12rem, 1.55vw, 1.42rem); letter-spacing: 0.025em; line-height: 1.26; margin: 1.9rem 0 2.1rem; max-width: 29rem; }
 .call-button { align-items: center; background: var(--pink); border-radius: 999px; color: var(--ink); display: inline-flex; font-family: Anton, Impact, sans-serif; font-size: 1.1rem; gap: 0.55rem; padding: 1.1rem 1.65rem; text-decoration: none; transition: transform 160ms var(--ease-out), background 160ms var(--ease-out); }
 .call-button:hover { background: var(--white); transform: translateY(-3px); }
 .call-actions { align-items: center; display: flex; flex-wrap: wrap; gap: 0.8rem; }
 .instagram-button { align-items: center; border: 2px solid var(--cream); border-radius: 999px; color: var(--cream); display: inline-flex; font-family: Anton, Impact, sans-serif; font-size: 1rem; gap: 0.48rem; padding: calc(1.1rem - 2px) 1.35rem; text-decoration: none; transition: background 160ms var(--ease-out), color 160ms var(--ease-out), transform 160ms var(--ease-out); }
 .instagram-button:hover { background: var(--cream); color: var(--teal); transform: translateY(-3px); }
 .call-details { display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; margin-top: 2rem; }
-.call-details span, .call-details a { align-items: center; color: inherit; display: flex; font-size: 0.62rem; gap: 0.36rem; letter-spacing: 0.05em; text-decoration: none; }
+.call-details span, .call-details a { align-items: center; color: inherit; display: flex; font-size: 0.75rem; gap: 0.36rem; letter-spacing: 0.075em; text-decoration: none; }
 .call-details a:hover { text-decoration: underline; text-underline-offset: 0.24rem; }
-.placeholder-note { color: rgba(247, 246, 239, 0.65); font-size: 0.55rem; letter-spacing: 0.07em; margin: 1rem 0 0; }
+.placeholder-note { color: rgba(247, 246, 239, 0.65); font-size: 0.68rem; letter-spacing: 0.09em; margin: 1rem 0 0; }
 
 .reference-footer { align-items: center; background: var(--pink); color: var(--ink); display: grid; grid-template-columns: 1fr 1fr 1fr; min-height: 5.7rem; padding: 1rem clamp(1.5rem, 4vw, 4rem); }
 .reference-footer > span { font-family: Anton, Impact, sans-serif; font-size: 1.3rem; letter-spacing: 0.015em; }
-.reference-footer p { font-size: 0.58rem; justify-self: center; letter-spacing: 0.06em; margin: 0; text-align: center; }
+.reference-footer p { font-size: 0.7rem; justify-self: center; letter-spacing: 0.085em; margin: 0; text-align: center; }
 .reference-footer a { justify-self: end; }
 
 @media (max-width: 840px) {
@@ -211,13 +211,13 @@ img { display: block; max-width: 100%; }
 .bestseller-image img { aspect-ratio: 1 / 1; height: 100%; object-fit: cover; transition: transform 240ms var(--ease-out); width: 100%; }
 .bestseller-card:hover .bestseller-image img { transform: scale(1.035); }
 .bestseller-details { align-items: start; display: grid; gap: 0.8rem; grid-template-columns: auto 1fr auto; padding: 1.2rem 0 1rem; }
-.product-index { color: var(--teal); font-size: 0.59rem; letter-spacing: 0.06em; padding-top: 0.22rem; }
+.product-index { color: var(--teal); font-size: 0.7rem; letter-spacing: 0.08em; padding-top: 0.22rem; }
 .bestseller-details h3 { font-family: Anton, Impact, sans-serif; font-size: clamp(1.3rem, 2.05vw, 2rem); font-weight: 400; letter-spacing: 0.01em; line-height: 0.9; margin: 0 0 0.35rem; }
-.bestseller-details p { font-size: 0.59rem; letter-spacing: 0.03em; line-height: 1.25; margin: 0; }
+.bestseller-details p { font-size: 0.72rem; letter-spacing: 0.055em; line-height: 1.2; margin: 0; }
 .bestseller-details strong { font-family: Anton, Impact, sans-serif; font-size: 1.15rem; padding-top: 0.1rem; }
 .bestseller-action { align-items: center; background: var(--pink); border-radius: 999px; color: var(--ink); display: flex; font-family: Anton, Impact, sans-serif; font-size: clamp(0.76rem, 1.15vw, 1rem); gap: 0.4rem; justify-content: center; margin-top: auto; min-height: 3.3rem; padding: 0.7rem 0.9rem; text-align: center; text-decoration: none; transition: background 160ms var(--ease-out), transform 160ms var(--ease-out); }
 .bestseller-action:hover { background: #ffb5ec; transform: translateY(-3px); }
-.bestseller-note { color: var(--teal); font-size: 0.62rem; letter-spacing: 0.07em; margin: clamp(2.5rem, 5vw, 4rem) 0 0; position: relative; text-align: center; z-index: 1; }
+.bestseller-note { color: var(--teal); font-size: 0.76rem; letter-spacing: 0.09em; margin: clamp(2.5rem, 5vw, 4rem) 0 0; position: relative; text-align: center; z-index: 1; }
 
 @media (max-width: 840px) {
   .bestseller-card-row { gap: 1rem; }
