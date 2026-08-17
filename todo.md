@@ -1,6 +1,6 @@
-# Wide Typography Refinement Checklist
+# Dramatic Wide Typography Checklist
 
-- [x] Establish a wider, more substantial type treatment derived from the hero display style.
-- [x] Apply it consistently to navigation, sections, card labels, actions, and footer text.
-- [x] Preserve readable body-copy proportions while removing the narrow, thin appearance.
-- [x] Verify the type system on desktop and mobile and deliver the checkpoint.
+- [x] Use a visibly expanded, heavyweight horizontal type treatment rather than a subtle tracking adjustment.
+- [x] Apply the expansion to supporting text, navigation, card labels, actions, and footer content.
+- [x] Prevent overflow and preserve a readable hierarchy on desktop and mobile.
+- [x] Verify the stronger typography change and deliver the checkpoint.

@@ -1,5 +1,5 @@
 /*
- * Design reminder: Wisks and Wishes uses a cream + teal bakery editorial, supplied circular logo, giant sans headlines,
+ * Design reminder: Wisks and Wishes uses a cream + teal bakery editorial, supplied circular logo, and a deliberately wide heavyweight type system.
  * rounded food imagery, a right-to-left product rail, and minimal pink WhatsApp call actions.
  */
 @import "tailwindcss";
@@ -33,11 +33,12 @@
   --hero-round: 0px;
   --hero-copy-parallax: 0px;
   --hero-copy-fade: 1;
+  --wide-display: "Archivo Black", Arial Black, Impact, sans-serif;
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { background: var(--cream); color: var(--ink); font-family: Anton, Impact, sans-serif; letter-spacing: 0.028em; margin: 0; overflow-x: hidden; }
+body { background: var(--cream); color: var(--ink); font-family: var(--wide-display); letter-spacing: 0.02em; margin: 0; overflow-x: hidden; }
 a { color: inherit; }
 button, a { font: inherit; }
 a:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
@@ -63,30 +64,30 @@ img { display: block; max-width: 100%; }
 .reference-brand { font-family: Anton, Impact, sans-serif; font-size: clamp(1.6rem, 2.3vw, 2.45rem); font-weight: 400; letter-spacing: 0.025em; line-height: 0.82; max-width: 9.5rem; text-decoration: none; }
 .reference-brand img { border-radius: 50%; display: block; height: clamp(5rem, 7.1vw, 7.2rem); object-fit: cover; width: clamp(5rem, 7.1vw, 7.2rem); }
 .reference-nav { align-items: center; display: flex; gap: clamp(1.4rem, 3.8vw, 4rem); }
-.reference-nav a, .header-whatsapp { color: inherit; font-family: Anton, Impact, sans-serif; font-size: clamp(0.95rem, 1.25vw, 1.25rem); letter-spacing: 0.035em; text-decoration: none; }
+.reference-nav a, .header-whatsapp { color: inherit; font-family: var(--wide-display); font-size: clamp(0.92rem, 1.15vw, 1.12rem); letter-spacing: 0.025em; text-decoration: none; }
 .reference-nav a { transition: color 150ms var(--ease-out); }
 .reference-nav a:hover { color: var(--teal); }
 .header-whatsapp { align-items: center; background: #42985c; border-radius: 999px; color: white; display: flex; gap: 0.5rem; justify-self: end; padding: 0.8rem 1.15rem; text-shadow: none; transition: background 160ms var(--ease-out), transform 160ms var(--ease-out); }
 .header-whatsapp:hover { background: #2e7744; transform: translateY(-2px); }
-.header-whatsapp span { font-family: Anton, Impact, sans-serif; font-size: 0.95rem; letter-spacing: 0.04em; }
+.header-whatsapp span { font-family: var(--wide-display); font-size: 0.86rem; letter-spacing: 0.03em; }
 
 .reference-hero { border-radius: 0 0 var(--hero-round) var(--hero-round); color: var(--white); height: 100svh; min-height: 40rem; overflow: hidden; padding: clamp(2rem, 5vw, 4rem); position: relative; transition: border-radius 80ms linear; }
 .hero-cover { background: url("/manus-storage/crumb-candle-hero_e9ad0c85.jpg") 51% 48% / cover no-repeat; inset: 0; position: absolute; transform: scale(1.035); }
 .hero-vignette { background: linear-gradient(90deg, rgba(7, 29, 35, 0.51), rgba(7, 29, 35, 0.1) 66%, rgba(7, 29, 35, 0.08)); inset: 0; position: absolute; }
 .hero-copy { bottom: clamp(2.2rem, 4.4vw, 4rem); left: clamp(1.5rem, 4vw, 4rem); max-width: min(64rem, calc(100% - 15rem)); opacity: var(--hero-copy-fade); position: absolute; transform: translate3d(0, var(--hero-copy-parallax), 0); transition: transform 80ms linear, opacity 80ms linear; z-index: 1; }
 .hero-copy p { font-size: 0.76rem; letter-spacing: 0.095em; margin: 0 0 1rem; }
-.hero-copy h1, .statement-section h2, .rail-section h2, .call-copy h2 { font-family: Anton, Impact, sans-serif; font-weight: 400; letter-spacing: 0.035em; line-height: 0.83; margin: 0; text-transform: uppercase; }
-.hero-copy h1 { font-size: clamp(4.8rem, 9.5vw, 9.5rem); text-shadow: 0 2px 18px rgba(0, 0, 0, 0.2); }
-.indulge-disc { align-items: center; background: var(--pink); border-radius: 50%; color: var(--white); display: flex; flex-direction: column; font-family: Anton, Impact, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.65rem); gap: 1rem; height: clamp(10rem, 14vw, 14rem); justify-content: center; line-height: 1.03; position: absolute; right: clamp(2rem, 7vw, 7rem); text-align: center; text-decoration: none; top: 52%; transform: rotate(-19deg); transition: transform 180ms var(--ease-out), background 180ms var(--ease-out); width: clamp(10rem, 14vw, 14rem); z-index: 1; }
+.hero-copy h1, .statement-section h2, .rail-section h2, .call-copy h2 { font-family: var(--wide-display); font-weight: 900; letter-spacing: -0.038em; line-height: 0.86; margin: 0; text-transform: uppercase; }
+.hero-copy h1 { font-size: clamp(4.2rem, 8.2vw, 8.2rem); text-shadow: 0 2px 18px rgba(0, 0, 0, 0.2); }
+.indulge-disc { align-items: center; background: var(--pink); border-radius: 50%; color: var(--white); display: flex; flex-direction: column; font-family: var(--wide-display); font-size: clamp(0.86rem, 1.35vw, 1.28rem); gap: 1rem; height: clamp(10rem, 14vw, 14rem); justify-content: center; line-height: 1.1; position: absolute; right: clamp(2rem, 7vw, 7rem); text-align: center; text-decoration: none; top: 52%; transform: rotate(-19deg); transition: transform 180ms var(--ease-out), background 180ms var(--ease-out); width: clamp(10rem, 14vw, 14rem); z-index: 1; }
 .indulge-disc:hover { background: #ffb2eb; transform: rotate(-12deg) translateY(-7px); }
 .hero-edge-note { bottom: clamp(2rem, 4vw, 3.2rem); font-size: 0.7rem; letter-spacing: 0.09em; margin: 0; position: absolute; right: clamp(1.5rem, 4vw, 4rem); writing-mode: vertical-rl; z-index: 1; }
 
 .statement-section { color: var(--teal); display: grid; gap: clamp(2rem, 4vw, 3.5rem); grid-template-columns: 1.12fr minmax(18rem, 0.55fr); padding: clamp(4.5rem, 6.5vw, 6.25rem) clamp(1.5rem, 4vw, 4rem); }
 .section-label { align-items: center; display: flex; font-size: 0.76rem; gap: 0.45rem; letter-spacing: 0.095em; margin: 0 0 clamp(2rem, 4vw, 4rem); }
-.statement-section h2 { font-size: clamp(4rem, 8.2vw, 8.3rem); }
+.statement-section h2 { font-size: clamp(3.35rem, 6.9vw, 6.9rem); }
 .statement-copy { align-self: center; max-width: 32rem; }
-.statement-copy > p { font-family: Anton, Impact, sans-serif; font-size: clamp(1.34rem, 2.05vw, 1.9rem); font-weight: 400; letter-spacing: 0.025em; line-height: 1.22; margin: 0 0 2.7rem; }
-.underlined-link { align-items: center; border-bottom: 2px solid currentColor; display: inline-flex; font-family: Anton, Impact, sans-serif; font-size: 0.94rem; gap: 0.45rem; padding-bottom: 0.45rem; text-decoration: none; transition: gap 160ms var(--ease-out); }
+.statement-copy > p { font-family: var(--wide-display); font-size: clamp(1.05rem, 1.55vw, 1.35rem); font-weight: 900; letter-spacing: -0.018em; line-height: 1.3; margin: 0 0 2.7rem; }
+.underlined-link { align-items: center; border-bottom: 2px solid currentColor; display: inline-flex; font-family: var(--wide-display); font-size: 0.72rem; gap: 0.45rem; padding-bottom: 0.45rem; text-decoration: none; transition: gap 160ms var(--ease-out); }
 .underlined-link:hover { gap: 0.85rem; }
 
 .rail-section { background: var(--cream); color: var(--ink); padding: 0 0 clamp(5rem, 10vw, 9rem); }
@@ -118,11 +119,11 @@ img { display: block; max-width: 100%; }
 .call-copy { align-self: center; }
 .call-copy .section-label { color: rgba(247, 246, 239, 0.78); margin-bottom: 1.3rem; }
 .call-copy h2 { font-size: clamp(4rem, 7vw, 7.4rem); }
-.call-copy > p:not(.section-label):not(.placeholder-note) { font-family: Anton, Impact, sans-serif; font-size: clamp(1.12rem, 1.55vw, 1.42rem); letter-spacing: 0.025em; line-height: 1.26; margin: 1.9rem 0 2.1rem; max-width: 29rem; }
-.call-button { align-items: center; background: var(--pink); border-radius: 999px; color: var(--ink); display: inline-flex; font-family: Anton, Impact, sans-serif; font-size: 1.1rem; gap: 0.55rem; padding: 1.1rem 1.65rem; text-decoration: none; transition: transform 160ms var(--ease-out), background 160ms var(--ease-out); }
+.call-copy > p:not(.section-label):not(.placeholder-note) { font-family: var(--wide-display); font-size: clamp(0.98rem, 1.3vw, 1.16rem); letter-spacing: -0.016em; line-height: 1.34; margin: 1.9rem 0 2.1rem; max-width: 29rem; }
+.call-button { align-items: center; background: var(--pink); border-radius: 999px; color: var(--ink); display: inline-flex; font-family: var(--wide-display); font-size: 0.82rem; gap: 0.55rem; padding: 1.1rem 1.65rem; text-decoration: none; transition: transform 160ms var(--ease-out), background 160ms var(--ease-out); }
 .call-button:hover { background: var(--white); transform: translateY(-3px); }
 .call-actions { align-items: center; display: flex; flex-wrap: wrap; gap: 0.8rem; }
-.instagram-button { align-items: center; border: 2px solid var(--cream); border-radius: 999px; color: var(--cream); display: inline-flex; font-family: Anton, Impact, sans-serif; font-size: 1rem; gap: 0.48rem; padding: calc(1.1rem - 2px) 1.35rem; text-decoration: none; transition: background 160ms var(--ease-out), color 160ms var(--ease-out), transform 160ms var(--ease-out); }
+.instagram-button { align-items: center; border: 2px solid var(--cream); border-radius: 999px; color: var(--cream); display: inline-flex; font-family: var(--wide-display); font-size: 0.76rem; gap: 0.48rem; padding: calc(1.1rem - 2px) 1.35rem; text-decoration: none; transition: background 160ms var(--ease-out), color 160ms var(--ease-out), transform 160ms var(--ease-out); }
 .instagram-button:hover { background: var(--cream); color: var(--teal); transform: translateY(-3px); }
 .call-details { display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; margin-top: 2rem; }
 .call-details span, .call-details a { align-items: center; color: inherit; display: flex; font-size: 0.75rem; gap: 0.36rem; letter-spacing: 0.075em; text-decoration: none; }
@@ -130,7 +131,7 @@ img { display: block; max-width: 100%; }
 .placeholder-note { color: rgba(247, 246, 239, 0.65); font-size: 0.68rem; letter-spacing: 0.09em; margin: 1rem 0 0; }
 
 .reference-footer { align-items: center; background: var(--pink); color: var(--ink); display: grid; grid-template-columns: 1fr 1fr 1fr; min-height: 5.7rem; padding: 1rem clamp(1.5rem, 4vw, 4rem); }
-.reference-footer > span { font-family: Anton, Impact, sans-serif; font-size: 1.3rem; letter-spacing: 0.015em; }
+.reference-footer > span { font-family: var(--wide-display); font-size: 0.95rem; letter-spacing: -0.02em; }
 .reference-footer p { font-size: 0.7rem; justify-self: center; letter-spacing: 0.085em; margin: 0; text-align: center; }
 .reference-footer a { justify-self: end; }
 
@@ -158,7 +159,7 @@ img { display: block; max-width: 100%; }
   .reference-hero { border-radius: 0 0 var(--hero-round) var(--hero-round); height: 100svh; min-height: 39rem; padding: 1.25rem; }
   .hero-copy { bottom: 2rem; left: 1.25rem; }
   .hero-copy { bottom: 2.1rem; max-width: calc(100% - 8.7rem); }
-  .hero-copy h1 { font-size: clamp(3.95rem, 17.5vw, 5.05rem); }
+  .hero-copy h1 { font-size: clamp(3.3rem, 14.8vw, 4.35rem); }
   .hero-copy p { font-size: 0.5rem; }
   .indulge-disc { font-size: 0.86rem; height: 8.2rem; right: 1.4rem; top: 47%; width: 8.2rem; }
   .hero-edge-note { display: none; }
@@ -194,7 +195,7 @@ img { display: block; max-width: 100%; }
 .bestseller-diagonal-lane--row-4 { top: 70%; }
 .bestseller-word-track { display: flex; width: max-content; }
 .bestseller-word-group { display: flex; flex: 0 0 auto; gap: clamp(1.4rem, 2.5vw, 2.6rem); padding-right: clamp(1.4rem, 2.5vw, 2.6rem); }
-.bestseller-word-track span { font-family: Anton, Impact, sans-serif; font-size: clamp(3.5rem, 6.2vw, 6.2rem); font-weight: 400; letter-spacing: 0.01em; line-height: 0.76; white-space: nowrap; }
+.bestseller-word-track span { font-family: var(--wide-display); font-size: clamp(3rem, 5.2vw, 5.2rem); font-weight: 900; letter-spacing: -0.045em; line-height: 0.8; white-space: nowrap; }
 .bestseller-diagonal-lane--left .bestseller-word-track { animation: diagonal-marquee-left 26s linear infinite; }
 .bestseller-diagonal-lane--right .bestseller-word-track { animation: diagonal-marquee-right 26s linear infinite; }
 .bestseller-diagonal-lane--row-1, .bestseller-diagonal-lane--row-3 { color: transparent; -webkit-text-stroke: 2px var(--teal); text-stroke: 2px var(--teal); }
@@ -204,7 +205,7 @@ img { display: block; max-width: 100%; }
 @keyframes diagonal-marquee-right { from { transform: translate3d(-50%, 0, 0); } to { transform: translate3d(0, 0, 0); } }
 .bestseller-heading { position: relative; z-index: 1; }
 .bestseller-heading .section-label { color: var(--teal); margin-bottom: 1.1rem; }
-.bestseller-heading h2 { color: var(--teal); font-family: Anton, Impact, sans-serif; font-size: clamp(3.4rem, 6.3vw, 6.3rem); font-weight: 400; letter-spacing: 0.01em; line-height: 0.83; margin: 0 0 clamp(2.6rem, 5vw, 4.2rem); }
+.bestseller-heading h2 { color: var(--teal); font-family: var(--wide-display); font-size: clamp(2.9rem, 5.4vw, 5.4rem); font-weight: 900; letter-spacing: -0.04em; line-height: 0.86; margin: 0 0 clamp(2.6rem, 5vw, 4.2rem); }
 .bestseller-card-row { display: grid; gap: clamp(1rem, 2.8vw, 3rem); grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 auto; max-width: 1120px; position: relative; z-index: 1; }
 .bestseller-card { background: var(--cream); border: 2px solid var(--teal); border-radius: 1.8rem 1.8rem 0 0; box-shadow: 0 5px 0 var(--teal); display: flex; flex-direction: column; min-width: 0; overflow: hidden; padding: clamp(1rem, 1.7vw, 1.4rem); }
 .bestseller-image { border-radius: 1.35rem; overflow: hidden; }
@@ -212,10 +213,10 @@ img { display: block; max-width: 100%; }
 .bestseller-card:hover .bestseller-image img { transform: scale(1.035); }
 .bestseller-details { align-items: start; display: grid; gap: 0.8rem; grid-template-columns: auto 1fr auto; padding: 1.2rem 0 1rem; }
 .product-index { color: var(--teal); font-size: 0.7rem; letter-spacing: 0.08em; padding-top: 0.22rem; }
-.bestseller-details h3 { font-family: Anton, Impact, sans-serif; font-size: clamp(1.3rem, 2.05vw, 2rem); font-weight: 400; letter-spacing: 0.01em; line-height: 0.9; margin: 0 0 0.35rem; }
+.bestseller-details h3 { font-family: var(--wide-display); font-size: clamp(0.95rem, 1.45vw, 1.35rem); font-weight: 900; letter-spacing: -0.035em; line-height: 1; margin: 0 0 0.35rem; }
 .bestseller-details p { font-size: 0.72rem; letter-spacing: 0.055em; line-height: 1.2; margin: 0; }
-.bestseller-details strong { font-family: Anton, Impact, sans-serif; font-size: 1.15rem; padding-top: 0.1rem; }
-.bestseller-action { align-items: center; background: var(--pink); border-radius: 999px; color: var(--ink); display: flex; font-family: Anton, Impact, sans-serif; font-size: clamp(0.76rem, 1.15vw, 1rem); gap: 0.4rem; justify-content: center; margin-top: auto; min-height: 3.3rem; padding: 0.7rem 0.9rem; text-align: center; text-decoration: none; transition: background 160ms var(--ease-out), transform 160ms var(--ease-out); }
+.bestseller-details strong { font-family: var(--wide-display); font-size: 0.9rem; padding-top: 0.1rem; }
+.bestseller-action { align-items: center; background: var(--pink); border-radius: 999px; color: var(--ink); display: flex; font-family: var(--wide-display); font-size: clamp(0.54rem, 0.78vw, 0.7rem); gap: 0.4rem; justify-content: center; margin-top: auto; min-height: 3.3rem; padding: 0.7rem 0.9rem; text-align: center; text-decoration: none; transition: background 160ms var(--ease-out), transform 160ms var(--ease-out); }
 .bestseller-action:hover { background: #ffb5ec; transform: translateY(-3px); }
 .bestseller-note { color: var(--teal); font-size: 0.76rem; letter-spacing: 0.09em; margin: clamp(2.5rem, 5vw, 4rem) 0 0; position: relative; text-align: center; z-index: 1; }
 
