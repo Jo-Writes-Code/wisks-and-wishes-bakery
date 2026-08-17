@@ -1,6 +1,7 @@
-# Compact Product-Frame Refinement Checklist
+# Product, Pricing, and Navigation Refinement Checklist
 
-- [x] Shorten the three product frames to remove excess space before the WhatsApp buttons.
-- [x] Restore rounded product images with their upper corners protruding above the outer frame.
-- [x] Keep the product frame below the image tops and retain a compact, balanced card layout.
-- [x] Verify the updated cards on desktop and mobile, then deliver the checkpoint.
+- [x] Match the product-image top-corner rounding to the smaller current lower-corner rounding.
+- [x] Raise the product frames above the protruding images without shifting card content and convert prices to Tanzanian shillings.
+- [x] Reduce navigation height, preserve the logo size, and add a thick header-colored logo border.
+- [x] Replace the header WhatsApp glyph with a reliable CSS-drawn icon.
+- [x] Verify desktop and mobile behavior, then save and deliver the checkpoint.
