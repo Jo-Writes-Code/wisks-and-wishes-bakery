@@ -1,6 +1,6 @@
-# Header Alignment and Icon Restoration Checklist
+# Deeper Arch Refinement Checklist
 
-- [x] Restore the fully visible left logo, centered navigation, and right-aligned order button.
-- [x] Replace placeholder glyphs with proper WhatsApp and Instagram icons in header and footer actions.
-- [x] Make the thick logo border transparent initially and fade it to the white header color only after scroll.
-- [x] Verify desktop and mobile header alignment and scrolling behavior, then deliver the checkpoint.
+- [x] Extend the rounded upper corners farther down the sides of all three product frames.
+- [x] Extend the rounded upper corners farther down the sides of both pickup images.
+- [x] Preserve the existing lower-corner treatment, spacing, and image positions.
+- [x] Verify the deeper arches on desktop and mobile, then deliver the checkpoint.
