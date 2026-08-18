@@ -1,6 +1,6 @@
-# Original Hero Composition Restoration Checklist
+# Short-Viewport Hero Clamp Checklist
 
-- [x] Restore the original hero headline size and placement.
-- [x] Restore the original WhatsApp-circle size and placement.
-- [x] Keep the full composition visible in constrained viewports by expanding the hero safely rather than resizing the elements.
-- [x] Verify the restored desktop, portrait, and short-height experience before delivery.
+- [x] Preserve the existing hero text and circle placement at normal viewport heights.
+- [x] Shift the text and WhatsApp circle into the visible lower viewport only when the window is short.
+- [x] Keep the original element sizes and avoid clipping in portrait short viewports.
+- [ ] Verify normal and short-height behavior, then deliver the checkpoint.
