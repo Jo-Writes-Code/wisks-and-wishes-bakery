@@ -1,6 +1,6 @@
-# Responsive Hero Visibility Checklist
+# Original Hero Composition Restoration Checklist
 
-- [x] Keep the hero headline visible in narrow portrait and short-height viewports.
-- [x] Keep the WhatsApp circle visible and positioned clear of the hero copy across those viewports.
-- [x] Preserve the current desktop composition without introducing horizontal overflow.
-- [x] Verify standard desktop, portrait mobile, and short-height viewport behavior before delivery.
+- [x] Restore the original hero headline size and placement.
+- [x] Restore the original WhatsApp-circle size and placement.
+- [x] Keep the full composition visible in constrained viewports by expanding the hero safely rather than resizing the elements.
+- [x] Verify the restored desktop, portrait, and short-height experience before delivery.
