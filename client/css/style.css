@@ -21,7 +21,7 @@ img { display:block; max-width:100%; }
 .product-card > a .brand-icon { margin-left:.28rem; }
 .pink-action .brand-icon, .outline-action .brand-icon { font-size:1.12em; margin-left:.18rem; }
 .hero-section { border-radius:0 0 var(--hero-round) var(--hero-round); color:var(--white); height:100svh; min-height:40rem; overflow:hidden; position:relative; transition:border-radius .08s linear; }
-.hero-image { background:url("/manus-storage/crumb-candle-hero_e9ad0c85.jpg") 51% 48% / cover no-repeat; inset:0; position:absolute; transform:scale(1.035); }
+.hero-image { background:url("/assets/hero.webp") 51% 48% / cover no-repeat; inset:0; position:absolute; transform:scale(1.035); }
 .hero-overlay { background:linear-gradient(90deg,rgba(7,29,35,.51),rgba(7,29,35,.1) 66%,rgba(7,29,35,.08)); inset:0; position:absolute; }
 .hero-copy { bottom:clamp(2.2rem,4.4vw,4rem); left:clamp(1.5rem,4vw,4rem); max-width:min(64rem,calc(100% - 15rem)); opacity:var(--copy-fade); position:absolute; transform:translate3d(0,var(--copy-y),0); transition:transform .08s linear,opacity .08s linear; z-index:1; }
 .hero-copy p, .eyebrow { font-size:.76rem; letter-spacing:.095em; margin:0 0 1rem; }
