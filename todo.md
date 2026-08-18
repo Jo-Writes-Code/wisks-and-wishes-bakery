@@ -1,6 +1,6 @@
-# Deeper Arch Refinement Checklist
+# Responsive Hero Visibility Checklist
 
-- [x] Extend the rounded upper corners farther down the sides of all three product frames.
-- [x] Extend the rounded upper corners farther down the sides of both pickup images.
-- [x] Preserve the existing lower-corner treatment, spacing, and image positions.
-- [x] Verify the deeper arches on desktop and mobile, then deliver the checkpoint.
+- [x] Keep the hero headline visible in narrow portrait and short-height viewports.
+- [x] Keep the WhatsApp circle visible and positioned clear of the hero copy across those viewports.
+- [x] Preserve the current desktop composition without introducing horizontal overflow.
+- [x] Verify standard desktop, portrait mobile, and short-height viewport behavior before delivery.
